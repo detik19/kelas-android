@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidSMSExample</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="sendsms">Send SMS</string>
+    <string name="phoneNumberTxt">Enter Phone Number</string>
+    <string name="enter_sms_msg">Enter SMS Message</string>
+
+</resources>
