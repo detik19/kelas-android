@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Notification</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="notify1_text">Notify 1 - text</string>
+    <string name="notify2_vibrate">Notify 2 - Vibrate</string>
+    <string name="notify3_led">Notify 3 - LED</string>
+    <string name="notify4_noise">Notify 4 - Noise</string>
+    <string name="notify_remoteview">Notify - Remote View</string>
+    <string name="notify_api_level11">Notify - API Level 11+</string>
+
+</resources>
