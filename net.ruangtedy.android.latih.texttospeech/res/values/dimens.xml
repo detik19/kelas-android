@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_to_speech">26dip</dimen>
+    <dimen name="ttts_padd">15dip</dimen>
+    <dimen name="txtText_margintop">20dip</dimen>
+    <dimen name="txtText_margin">10dip</dimen>
+</resources>
