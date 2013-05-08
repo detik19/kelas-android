@@ -1,10 +1,13 @@
 package net.ruangtedy.android.latih.intents.implicit;
 
+import java.util.ArrayList;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.speech.RecognizerIntent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,12 +15,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class CallIntentsActivity extends Activity implements OnClickListener{
 
 	private Spinner spinner;
 	ImageView mImageView;
+	TextView txt;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,7 @@ public class CallIntentsActivity extends Activity implements OnClickListener{
 		spinner.setAdapter(adapter);
 		Button btnIntent=(Button) findViewById(R.id.button1);
 		mImageView=(ImageView) findViewById(R.id.imageView1);
+		txt=(TextView) findViewById(R.id.textView1);
 		btnIntent.setOnClickListener(this);
 	}
 	
@@ -81,9 +87,14 @@ public class CallIntentsActivity extends Activity implements OnClickListener{
 				
 			case 8:
 				intent= new Intent(Intent.ACTION_PICK);
-				intent.setType("images/*");
+				intent.setType("image/*");
 				startActivityForResult(intent, 1);
-				
+				break;
+			case 9:
+				intent=new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+				intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, "en-US");
+				startActivityForResult(intent, 2);
+				break;
 		}
 	
 		
@@ -100,6 +111,11 @@ public class CallIntentsActivity extends Activity implements OnClickListener{
 		else if(resultCode==Activity.RESULT_OK&&requestCode==1){
 			 Uri photoUri = data.getData();
    		  	mImageView.setImageURI(photoUri);
+		}
+		else if(resultCode==Activity.RESULT_OK&&requestCode==2){
+			ArrayList<String> text = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+			txt.setText(text.get(0));
+		
 		}
 	}
 

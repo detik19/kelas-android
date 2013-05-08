@@ -10,5 +10,6 @@
         <item>Show Contacts</item>
         <item>Edit First Contact</item>
         <item>Take from gallery</item>
+        <item>Speech to text</item>
     </string-array>
 </resources>
