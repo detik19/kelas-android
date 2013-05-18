@@ -1,14 +1,22 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".GMapV2Activity" >
 
-   
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-		  android:id="@+id/map"
-		  android:layout_width="match_parent"
-		  android:layout_height="match_parent"
-		  class="com.google.android.gms.maps.SupportMapFragment"/>
+    <TextView
+        android:id="@+id/locinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-</RelativeLayout>
+    <!-- <fragment xmlns:android="http://schemas.android.com/apk/res/android" -->
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+</LinearLayout>

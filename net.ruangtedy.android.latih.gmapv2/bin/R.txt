@@ -13,9 +13,11 @@ int attr uiZoomGestures 0x7f01000b
 int attr useViewLifecycle 0x7f01000c
 int attr zOrderOnTop 0x7f01000d
 int drawable ic_launcher 0x7f020000
+int id LinearLayout1 0x7f040005
 int id hybrid 0x7f040004
-int id map 0x7f040005
-int id menu_settings 0x7f040006
+int id locinfo 0x7f040006
+int id map 0x7f040007
+int id menu_settings 0x7f040008
 int id none 0x7f040000
 int id normal 0x7f040001
 int id satellite 0x7f040002
