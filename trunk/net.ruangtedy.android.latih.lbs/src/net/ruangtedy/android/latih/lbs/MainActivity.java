@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
-
+/*
+ * tes tes
+ */
 public class MainActivity extends Activity {
 	
 	private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES=1;
